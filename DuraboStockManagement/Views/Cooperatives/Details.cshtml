@@ -1,0 +1,26 @@
+﻿@model DuraboStockManagement.Models.Cooperative
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cooperative</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomCooperative)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomCooperative)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CooperativeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

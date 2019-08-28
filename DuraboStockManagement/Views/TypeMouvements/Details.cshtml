@@ -1,0 +1,34 @@
+﻿@model DuraboStockManagement.Models.TypeMouvement
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TypeMouvement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Designation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Designation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sens)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sens)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TypeMouvementID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

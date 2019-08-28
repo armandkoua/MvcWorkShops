@@ -1,0 +1,82 @@
+﻿@model DuraboStockManagement.Models.Mouvement
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Mouvement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MagasinEntree.NomMagasin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MagasinEntree.NomMagasin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MagasinSortie.NomMagasin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MagasinSortie.NomMagasin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateMouvement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateMouvement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantitéDemandée)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantitéDemandée)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstApprouvee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstApprouvee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstRefusee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstRefusee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomApprobateur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomApprobateur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomDemandeur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomDemandeur)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MouvementID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

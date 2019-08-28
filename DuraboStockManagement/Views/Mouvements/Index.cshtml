@@ -1,0 +1,75 @@
+﻿@model IEnumerable<DuraboStockManagement.Models.Mouvement>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MagasinEntree.NomMagasin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MagasinSortie.NomMagasin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateMouvement)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuantitéDemandée)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstApprouvee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstRefusee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomApprobateur)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomDemandeur)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MagasinEntree.NomMagasin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MagasinSortie.NomMagasin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateMouvement)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuantitéDemandée)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstApprouvee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstRefusee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomApprobateur)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomDemandeur)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MouvementID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MouvementID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MouvementID })
+        </td>
+    </tr>
+}
+
+</table>
